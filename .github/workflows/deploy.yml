@@ -19,7 +19,9 @@ jobs:
       - name: Install Databricks CLI
         uses: databricks/setup-cli@main
 
-      - run: databricks bundle deploy
+      - run: |
+          databricks bundle validate -t prod
+          databricks bundle deploy -t prod
         working-directory: DLT_uber
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
