@@ -3,7 +3,7 @@
 resources:
   jobs:
     sample_job:
-      name: uber_job_new
+      name: uber_job_new_prod
 
       trigger:
         # Run this job every day, exactly one day from the last run; see https://docs.databricks.com/api/workspace/jobs/create#trigger
